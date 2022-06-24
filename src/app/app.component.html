@@ -1,0 +1,52 @@
+<div class="container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <h1>Form</h1>
+
+    <div class="form-group" [formGroup]="myForm">
+      <label for="text">Text</label>
+      <input
+        type="text"
+        class="form-control"
+        id="text"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        formControlName="text"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="Number">Number</label>
+      <input
+        type="number"
+        class="form-control"
+        id="Number"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        formControlName="number"
+      />
+    </div>
+
+    <select class="form-control" formControlName="select">
+      <option selected>Select</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+
+    <div class="form-group">
+      <label for="coment">Coment</label>
+      <input
+        type="text"
+        class="form-control"
+        id="coment"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        formControlName="coment"
+      />
+    </div>
+
+    <button class="btn btn-success" type="submit" [disabled]="myForm.invalid">
+      Save
+    </button>
+  </form>
+</div>
